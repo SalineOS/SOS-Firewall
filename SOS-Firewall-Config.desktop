@@ -1,6 +1,6 @@
 
 [Desktop Entry]
-Name=SalineOS Firewall
+Name=SOS Firewall
 Version=1.0
 Type=Application
 Exec=gksu /usr/bin/SOS-Firewall-Config
