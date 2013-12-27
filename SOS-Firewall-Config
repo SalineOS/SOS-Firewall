@@ -197,7 +197,7 @@ chmod +x /usr/bin/Start-SOS-Firewall
 
 ## Inform the user that the firewall is active
 
-yad --title="SOS Firewall" --window-icon=/usr/share/pixmaps/SOS-Firewall.png --text="SOS Firewall $NOWENABLED" --button=$"gtk-ok:1"
+yad --title="SOS Firewall" --width="275" --window-icon=/usr/share/pixmaps/SOS-Firewall.png --text-align="center" --text="SOS Firewall $NOWENABLED" --button=$"gtk-ok:1"
 
 ## Return to main menu
 MainMenu
@@ -363,7 +363,7 @@ iptables -P FORWARD ACCEPT
 iptables -P OUTPUT ACCEPT
 
 ## Inform the user
-yad --title="SOS Firewall" --window-icon="/usr/share/pixmaps/SOS-Firewall.png" --text="     SOS Firewall $NOWDISABLED    " --button=$"gtk-ok:1"
+yad --title="SOS Firewall" --window-icon="/usr/share/pixmaps/SOS-Firewall.png" --text-align="center" --width="275" --text="SOS Firewall $NOWDISABLED" --button=$"gtk-ok:1"
 MainMenu
 exit 0
 elif [ "$Operation" = "Enable" ]; then
@@ -386,7 +386,7 @@ elif [ "$Operation" = "Start" ]; then
   exit 0
  else
   /usr/bin/Start-SOS-Firewall
-  yad --title="SOS Firewall" --window-icon=/usr/share/pixmaps/SOS-Firewall.png --text="       $NOWACTIVE       " --button=$"gtk-ok:1"
+  yad --title="SOS Firewall" --window-icon=/usr/share/pixmaps/SOS-Firewall.png --width="275" --text-align="center" --text="$NOWACTIVE" --button=$"gtk-ok:1"
   MainMenu
   exit 0
  fi
